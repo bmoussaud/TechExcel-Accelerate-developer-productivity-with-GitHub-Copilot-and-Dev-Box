@@ -68,16 +68,10 @@ namespace RazorPagesTestSample.Pages
 
             if (Messages.Count == 0)
             {
-                MessageAnalysisResult = "FEAURE BNEOIT There are no messages to analyze.";
+                MessageAnalysisResult = "FEATURE SPEED There are no messages to analyze.";
             }
             else
             {
-                // Speed loop. Lower this number once every quarter so we
-                // get our performance improvement quarterly bonus.
-                for (int i = 0; i < 3000; i++) {
-                    Thread.Sleep(1);
-                }
-
                 var wordCount = 0;
 
                 foreach (var message in Messages)
@@ -86,7 +80,7 @@ namespace RazorPagesTestSample.Pages
                 }
 
                 var avgWordCount = Decimal.Divide(wordCount, Messages.Count);
-                MessageAnalysisResult = $"FEAURE BNEOIT  The average message length is {avgWordCount:0.##} words.";
+                MessageAnalysisResult = $"FEATURE SPEED The average message length is {avgWordCount:0.##} words.";
             }
 
             return RedirectToPage();
